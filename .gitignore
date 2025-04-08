@@ -1,0 +1,32 @@
+# macOS system files
+.DS_Store
+
+# Node modules (if using any tools locally)
+node_modules/
+
+# Theme Kit files
+config.yml
+
+# Shopify CLI files
+.shopify/
+
+# Build directories (if using tools like Webpack, Gulp, etc.)
+dist/
+build/
+tmp/
+.sass-cache/
+
+# Sass/SCSS partials or maps (if you're compiling locally)
+*.map
+*.scss
+
+# OS and editor files
+Thumbs.db
+*.swp
+*.swo
+*.bak
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

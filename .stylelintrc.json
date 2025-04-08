@@ -1,0 +1,29 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "order/properties-alphabetical-order": true,
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "include",
+          "mixin",
+          "extend",
+          "if",
+          "else",
+          "function",
+          "return",
+          "for",
+          "each",
+          "while"
+        ]
+      }
+    ]
+  }
+}
