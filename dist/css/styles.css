@@ -809,8 +809,8 @@ Components
   font-size: 1.5rem;
   line-height: 1.5;
   padding-top: 1.5625rem;
-  padding-right: 1.5625rem;
-  padding-bottom: 0;
+  padding-right: 0;
+  padding-bottom: 1.5625rem;
   padding-left: 0;
   background: transparent;
   border: 0;
@@ -831,6 +831,7 @@ Components
   display: block;
 }
 .accordions ul .accordion-trigger svg {
+  margin-left: 0.625rem;
   flex: 0 0 1.5rem;
 }
 .accordions ul .accordion-trigger .close-icon {

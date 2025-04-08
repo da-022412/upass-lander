@@ -36,7 +36,7 @@
     .accordion-trigger {
       @extend %font-inter-medium;
       @include font-size(24, 36);
-      @include padding(rem(25) rem(25) 0 0);
+      @include padding(rem(25) 0);
       background: transparent;
       border: 0;
       color: $color-black;
@@ -59,6 +59,7 @@
       }
 
       svg {
+        @include margin(null null null rem(10));
         flex: 0 0 rem(24);
       }
 
