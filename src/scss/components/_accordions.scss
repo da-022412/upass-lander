@@ -36,9 +36,10 @@
     .accordion-trigger {
       @extend %font-inter-medium;
       @include font-size(24, 36);
-      @include padding(rem(25) 0);
+      @include padding(rem(25) rem(25) 0 0);
       background: transparent;
       border: 0;
+      color: $color-black;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
