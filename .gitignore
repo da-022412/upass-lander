@@ -11,14 +11,12 @@ config.yml
 .shopify/
 
 # Build directories (if using tools like Webpack, Gulp, etc.)
-dist/
 build/
 tmp/
 .sass-cache/
 
 # Sass/SCSS partials or maps (if you're compiling locally)
 *.map
-*.scss
 
 # OS and editor files
 Thumbs.db
