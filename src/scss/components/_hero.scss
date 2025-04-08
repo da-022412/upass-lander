@@ -1,0 +1,126 @@
+.hero {
+  background: url("../assets/images/upass_hero-background.jpg") lightgray 50% / cover no-repeat;
+
+  &__wrapper {
+    @include maxwidth;
+
+    &-inner {
+      @include padding(rem(20) rem(20) rem(80));
+
+      @include mq($bp768) {
+        @include padding(rem(60) rem(32) rem(120));
+      }
+
+      @include mq($bp1024) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__logo {
+    @include margin(null auto rem(30));
+    width: rem(150);
+
+    @include mq($bp1024) {
+      @include margin(null auto null 0);
+    }
+  }
+
+  &__text-wrapper {
+    @include margin(null null rem(20));
+
+    @include mq($bp1024) {
+      flex: 0 0 calc(50% - #{rem(25)});
+    }
+
+    .page-title {
+      @include margin(null null rem(10));
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(null null rem(20));
+      }
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
+      h1 {
+        @extend %font-veneer-regular;
+        @include font-size(62, 66);
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+          @include font-size(102, 92);
+        }
+      }
+    }
+
+    .section-title {
+      @include margin(null null rem(20));
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(null null rem(40));
+      }
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
+      h2 {
+        @extend %font-oswald-semibold;
+        @include font-size(25, 32);
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+        @include font-size(32, 32);
+        }
+      }
+    }
+
+    .description {
+      text-align: center;
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
+      p {
+        @extend %font-inter-medium;
+        @include font-size(16, 28);
+        color: $color-gray;
+
+        @include mq($bp768) {
+          @include font-size(18, 30);
+        }
+      }
+    }
+
+    .link {
+      display: none;
+
+      @include mq($bp768) {
+        @include margin(rem(40) null null);
+        display: block;
+        text-align: center;
+      }
+
+      @include mq($bp1024) {
+        text-align: left;
+      }
+
+      a {
+        @include button;
+      }
+    }
+  }
+
+  &__image {
+    @include mq($bp1024) {
+      flex: 0 0 calc(50% - #{rem(25)});
+    }
+  }
+}

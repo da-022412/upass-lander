@@ -1,28 +1,28 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync').create();
+const gulp = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+const browserSync = require("browser-sync").create();
 
-gulp.task('sass', function () {
-    return gulp
-        .src('src/scss/*.scss')
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(browserSync.stream());
+// Compile Sass and Autoprefix
+gulp.task("sass", function () {
+  return gulp
+    .src("src/scss/*.scss")
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(gulp.dest("dist/css"))
+    .pipe(browserSync.stream());
 });
 
+// Serve and watch files
 gulp.task(
-    'serve',
-    gulp.series('sass', function () {
-        browserSync.init({
-            server: './dist/',
-        });
+  "serve",
+  gulp.series("sass", function () {
+    browserSync.init({
+      server: "./dist/",
+    });
 
-        gulp.watch('src/scss/*.scss', gulp.series('sass'));
-        gulp.watch('dist/*.html').on('change', browserSync.reload);
-    })
+    gulp.watch("src/scss/**/*.scss", gulp.series("sass"));
+    gulp.watch("dist/*.html").on("change", browserSync.reload);
+  })
 );
 
-gulp.task('default', gulp.series('serve'));
+// Default task
+gulp.task("default", gulp.series("serve"));

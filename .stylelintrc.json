@@ -8,6 +8,7 @@
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
     "no-descending-specificity": null,
+    "declaration-empty-line-before": null,
     "at-rule-no-unknown": [
       true,
       {

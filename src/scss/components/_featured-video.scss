@@ -1,0 +1,42 @@
+.featured-video {
+  @include maxwidth(rem(1034));
+
+  &__wrapper {
+    position: relative;
+
+    @include mq($bp768) {
+      @include padding(null rem(32) rem(100));
+    }
+
+    @include mq($bp768) {
+      &::after {
+        background-color: $color-divider;
+        bottom: 0;
+        content: '';
+        height: rem(1);
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: calc(100% - #{rem(64)});
+      }
+    }
+  }
+
+  .image {
+    aspect-ratio: 1 / 1;
+
+    @include mq($bp768) {
+      aspect-ratio: 16 / 9;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @include mq($bp768) {
+        border-radius: rem(20);
+      }
+    }
+  }
+}

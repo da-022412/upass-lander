@@ -1,0 +1,59 @@
+.horizontal-cta {
+  background-color: $color-primary;
+
+  &__wrapper {
+    @include maxwidth(rem(1034));
+
+    &-inner {
+      @include padding(rem(60) rem(20));
+      position: relative;
+
+      @include mq($bp768) {
+        @include padding(rem(100) rem(32));
+      }
+    }
+  }
+
+  .section-title {
+    @include margin(null null rem(20));
+    text-align: center;
+
+    h2 {
+      @extend %font-veneer-regular;
+      @include font-size(48, 50);
+      color: $color-white;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(62, 60);
+      }
+
+      span {
+        color: $color-red;
+      }
+    }
+  }
+
+  .description {
+    text-align: center;
+
+    @include mq($bp1024) {
+      @include maxwidth(rem(970));
+    }
+
+    p {
+      @extend %font-inter-medium;
+      @include font-size(16, 28);
+      color: $color-white;
+    }
+  }
+
+  .link {
+    @include margin(rem(40) null null);
+    text-align: center;
+
+    a {
+      @include button;
+    }
+  }
+}

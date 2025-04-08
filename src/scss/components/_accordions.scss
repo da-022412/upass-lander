@@ -1,0 +1,82 @@
+.accordions {
+  @include maxwidth(rem(1000));
+
+  &__wrapper {
+    @include padding(rem(60) rem(20));
+
+    @include mq($bp768) {
+      @include padding(rem(100) rem(32));
+    }
+  }
+
+  .section-title {
+    @include margin(null null rem(40));
+    text-align: center;
+
+    h2 {
+      @extend %font-veneer-regular;
+      @include font-size(48, 50);
+      color: $color-black;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(62, 50);
+      }
+    }
+  }
+
+  ul {
+    @include padding(0);
+    list-style: none;
+
+    li {
+      border-bottom: rem(1) solid $color-black;
+    }
+
+    .accordion-trigger {
+      @extend %font-inter-medium;
+      @include font-size(24, 36);
+      @include padding(rem(25) 0);
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      width: 100%;
+
+      &.active {
+        @include padding(null null 0);
+
+        .open-icon {
+          display: none;
+        }
+
+        .close-icon {
+          display: block;
+        }
+      }
+
+      svg {
+        flex: 0 0 rem(24);
+      }
+
+      .close-icon {
+        display: none;
+      }
+    }
+
+    .accordion-panel {
+      @extend %font-inter-medium;
+      @include font-size(17, 24);
+      @include padding(rem(25) null);
+      color: $color-gray;
+      display: none;
+      letter-spacing: rem(-0.17);
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+}

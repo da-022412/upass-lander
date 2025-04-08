@@ -1,0 +1,49 @@
+$bp768: 'screen and (min-width: 768px)';
+$bp1024: 'screen and (min-width: 1025px)';
+
+$bp1024max: 'screen and (max-width: 1024px)';
+$bp768max: 'screen and (max-width: 767px)';
+
+$bp768-1024: 'screen and (min-width: 768px) and (max-width: 1024px)';
+
+$max-width: 1290px;
+
+$color-black: #090705;
+$color-white: #FFFFFF;
+$color-primary: #232E4D;
+$color-gray: #4B4B4B;
+$color-red: #CB0000;
+$color-divider: #D3D3D3;
+
+%font-veneer-regular {
+  font-family: "veneer", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+%font-inter-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+}
+
+%font-inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+}
+
+%font-anton-regular {
+  font-family: "Anton", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+%font-oswald-semibold {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+}
