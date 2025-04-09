@@ -71,8 +71,8 @@ img {
   font-weight: 400;
 }
 
-.sticky-cta .icons .icon span, .sticky-cta .description p, .horizontal-cta .description p, .accordions ul .accordion-panel, .accordions ul .accordion-trigger, .fifty-fifty-cta .text-wrapper .description p, .fifty-fifty .text-wrapper .description p,
-.fifty-fifty .text-wrapper .description ul, .stacked-cards .description p, .info-cards .description p, .hero__text-wrapper .description p {
+.sticky-cta .icons .icon span, .sticky-cta .description p, .horizontal-cta .description p, .accordions .accordion-list .accordion-panel, .accordions .accordion-list .accordion-trigger, .fifty-fifty-cta .text-wrapper .description p, .fifty-fifty .text-wrapper .description p,
+.fifty-fifty .text-wrapper .description ul, .stacked-cards .description p, .info-cards .description p, .hero .description p {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -196,25 +196,6 @@ Components
     line-height: 1;
   }
 }
-.hero__text-wrapper .description {
-  text-align: center;
-}
-@media screen and (min-width: 1025px) {
-  .hero__text-wrapper .description {
-    text-align: left;
-  }
-}
-.hero__text-wrapper .description p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #4B4B4B;
-}
-@media screen and (min-width: 768px) {
-  .hero__text-wrapper .description p {
-    font-size: 1.125rem;
-    line-height: 1.6667;
-  }
-}
 .hero__text-wrapper .link {
   display: none;
 }
@@ -250,6 +231,51 @@ Components
 }
 .hero__text-wrapper .link a:hover {
   background-color: #090705;
+}
+.hero .description {
+  text-align: center;
+}
+@media screen and (min-width: 1025px) {
+  .hero .description {
+    text-align: left;
+  }
+}
+.hero .description.hero-description {
+  display: none;
+}
+@media screen and (min-width: 1025px) {
+  .hero .description.hero-description {
+    display: block;
+  }
+}
+.hero .description.footer-description {
+  margin-top: 1.25rem;
+}
+@media screen and (min-width: 1025px) {
+  .hero .description.footer-description {
+    display: none;
+  }
+}
+.hero .description p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4B4B4B;
+}
+@media screen and (min-width: 768px) {
+  .hero .description p {
+    font-size: 1.125rem;
+    line-height: 1.6667;
+  }
+}
+.hero__image {
+  margin-right: -1.25rem;
+  margin-left: -1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 1025px) {
   .hero__image {
@@ -566,11 +592,11 @@ Components
   margin-top: 0.625rem;
 }
 .stacked-cards .items .item .cta-title h3 {
-  font-size: 1.5rem;
-  line-height: 1.1667;
+  font-size: 0.9375rem;
+  line-height: 1.6667;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .stacked-cards .items .item .cta-title h3 {
     font-size: 1.25rem;
     line-height: 1.25;
@@ -795,17 +821,17 @@ Components
     line-height: 0.8065;
   }
 }
-.accordions ul {
+.accordions .accordion-list {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
-.accordions ul li {
+.accordions .accordion-list > li {
   border-bottom: 0.0625rem solid #090705;
 }
-.accordions ul .accordion-trigger {
+.accordions .accordion-list .accordion-trigger {
   font-size: 1.5rem;
   line-height: 1.5;
   padding-top: 1.5625rem;
@@ -821,23 +847,23 @@ Components
   text-align: left;
   width: 100%;
 }
-.accordions ul .accordion-trigger.active {
+.accordions .accordion-list .accordion-trigger.active {
   padding-bottom: 0;
 }
-.accordions ul .accordion-trigger.active .open-icon {
+.accordions .accordion-list .accordion-trigger.active .open-icon {
   display: none;
 }
-.accordions ul .accordion-trigger.active .close-icon {
+.accordions .accordion-list .accordion-trigger.active .close-icon {
   display: block;
 }
-.accordions ul .accordion-trigger svg {
+.accordions .accordion-list .accordion-trigger svg {
   margin-left: 0.625rem;
   flex: 0 0 1.5rem;
 }
-.accordions ul .accordion-trigger .close-icon {
+.accordions .accordion-list .accordion-trigger .close-icon {
   display: none;
 }
-.accordions ul .accordion-panel {
+.accordions .accordion-list .accordion-panel {
   font-size: 1.0625rem;
   line-height: 1.4118;
   padding-top: 1.5625rem;
@@ -846,8 +872,21 @@ Components
   display: none;
   letter-spacing: -0.010625rem;
 }
-.accordions ul .accordion-panel.open {
+.accordions .accordion-list .accordion-panel.open {
   display: block;
+}
+.accordions .accordion-list .accordion-panel ul {
+  margin-top: 0.625rem;
+}
+.accordions .accordion-list .accordion-panel a {
+  color: #4B4B4B;
+  text-decoration: underline;
+}
+html[data-whatintent=mouse] .accordions .accordion-list .accordion-panel a {
+  transition: all 0.3s ease-in-out;
+}
+html[data-whatintent=mouse] .accordions .accordion-list .accordion-panel a:hover {
+  text-decoration: none;
 }
 
 .horizontal-cta {

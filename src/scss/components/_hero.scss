@@ -81,24 +81,6 @@
       }
     }
 
-    .description {
-      text-align: center;
-
-      @include mq($bp1024) {
-        text-align: left;
-      }
-
-      p {
-        @extend %font-inter-medium;
-        @include font-size(16, 28);
-        color: $color-gray;
-
-        @include mq($bp768) {
-          @include font-size(18, 30);
-        }
-      }
-    }
-
     .link {
       display: none;
 
@@ -118,7 +100,47 @@
     }
   }
 
+  .description {
+    text-align: center;
+
+    @include mq($bp1024) {
+      text-align: left;
+    }
+
+    &.hero-description {
+      display: none;
+
+      @include mq($bp1024) {
+        display: block;
+      }
+    }
+
+    &.footer-description {
+      @include margin(rem(20) null null);
+
+      @include mq($bp1024) {
+        display: none;
+      }
+    }
+
+    p {
+      @extend %font-inter-medium;
+      @include font-size(16, 28);
+      color: $color-gray;
+
+      @include mq($bp768) {
+        @include font-size(18, 30);
+      }
+    }
+  }
+
   &__image {
+    @include margin(null rem(-20) null);
+
+    @include mq($bp768) {
+      @include margin(null auto null);
+    }
+
     @include mq($bp1024) {
       flex: 0 0 calc(50% - #{rem(25)});
     }

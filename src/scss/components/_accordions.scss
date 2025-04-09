@@ -25,11 +25,11 @@
     }
   }
 
-  ul {
+  .accordion-list {
     @include padding(0);
     list-style: none;
 
-    li {
+    > li {
       border-bottom: rem(1) solid $color-black;
     }
 
@@ -78,6 +78,19 @@
 
       &.open {
         display: block;
+      }
+
+      ul {
+        @include margin(rem(10) null null);
+      }
+
+      a {
+        color: $color-gray;
+        text-decoration: underline;
+
+        @include hover {
+          text-decoration: none;
+        }
       }
     }
   }

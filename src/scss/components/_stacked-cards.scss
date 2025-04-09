@@ -99,10 +99,10 @@
 
         h3 {
           @extend %font-oswald-semibold;
-          @include font-size(24, 28);
+          @include font-size(15, 25);
           text-transform: uppercase;
 
-          @include mq($bp1024) {
+          @include mq($bp768) {
             @include font-size(20, 25);
           }
         }
