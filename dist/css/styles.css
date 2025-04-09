@@ -99,7 +99,7 @@ Mixins
 Components
 -------------------------- */
 .hero {
-  background: url("../assets/images/upass_hero-background.jpg") lightgray 50%/cover no-repeat;
+  background: url("../assets/images/upass_hero-bg.webp") lightgray 50%/cover no-repeat;
 }
 .hero__wrapper {
   margin: 0 auto;
